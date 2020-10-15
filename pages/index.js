@@ -2,12 +2,14 @@
  * @Author: Chris
  * @Date: 2020-10-15 17:55:43
  * @LastEditors: Chris
- * @LastEditTime: 2020-10-15 22:10:04
+ * @LastEditTime: 2020-10-15 22:47:05
  * @Descripttion: **
  */
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Router from 'next/router'
+import {Button} from 'antd'
+
 Router.events.on('routeChangeStart',(...args)=>{
   console.log(`routeChangeStart:`,args);
 })
@@ -30,6 +32,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
         这是首页
+        <Button>ddddd</Button>
       <main className={styles.main}>
         <p>路由跳转</p>
         <Link href={{pathname: 'user'}}><a>Link去个人中心页</a></Link>
@@ -50,6 +53,7 @@ export default function Home() {
       </main>
       <p>ggggg</p>
       <Link href='#test'><a>测试hash</a></Link>
+
     </div>
   )
 }
