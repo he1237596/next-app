@@ -2,13 +2,15 @@
  * @Author: Chris
  * @Date: 2020-10-15 17:55:43
  * @LastEditors: Chris
- * @LastEditTime: 2020-10-15 22:47:05
+ * @LastEditTime: 2020-10-16 20:18:14
  * @Descripttion: **
  */
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Router from 'next/router'
 import {Button} from 'antd'
+import Layout from '../components/layout'
+
 
 Router.events.on('routeChangeStart',(...args)=>{
   console.log(`routeChangeStart:`,args);
@@ -52,8 +54,10 @@ export default function Home() {
         <button onClick={() => jump('/goods/detail')}>Router去详情页</button>
       </main>
       <p>ggggg</p>
-      <Link href='#test'><a>测试hash</a></Link>
+      <Link href='/about'><a>测试hash</a></Link>
+    <Layout>
 
+    </Layout>
     </div>
   )
 }
